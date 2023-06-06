@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Fraunces:wght@700&family=Montserrat:wght@500;700&family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind configurations -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Primary colors
+              paleBlue: "hsl(225, 100%, 94%)",
+              brightBlue: "hsl(245, 75%, 52%)",
+              // Neutral colors
+              veryPaleBlue: "hsl(225, 100%, 98%)",
+              desaturatedBlue: "hsl(224, 23%, 55%)",
+              darkBlue: "hsl(223, 47%, 23%)",
+            },
+            fontFamily: {
+              sans: ["Red Hat Display", "sans-serif"],
+            },
+            screens: {
+              sm: "375px",
+              xl: "1440px",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Order summary card</title>
+  </head>
+  <body>
+    <!-- Main container -->
+    <div
+      class="flex items-center justify-center min-h-screen bg-[url('images/pattern-background-mobile.svg')] bg-no-repeat md:bg-[url('images/pattern-background-desktop.svg')] bg-paleBlue"
+    >
+      <!-- Card -->
+      <div class="bg-white rounded-3xl w-[90vw] md:w-[450px] shadow shadow-lg">
+        <!-- Flex container -->
+        <div class="flex flex-col">
+          <!-- Image -->
+          <img
+            src="images/illustration-hero.svg"
+            alt="Image"
+            class="rounded-t-3xl w-full"
+          />
+          <!-- Content -->
+          <div class="py-10 px-8 text-center">
+            <!-- Title -->
+            <h1 class="font-black text-2xl text-darkBlue">Order Summary</h1>
+            <!-- Description -->
+            <div class="my-6 text-desaturatedBlue md:px-4">
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </div>
+            <!-- Price -->
+            <div
+              class="flex flex-row rounded-xl bg-veryPaleBlue my-10 p-4 items-center justify-between"
+            >
+              <div class="flex flex-row items-center space-x-4">
+                <!-- Logo and price number -->
+                <img src="images/icon-music.svg" class="w-14" />
+                <div class="flex flex-col">
+                  <div class="font-black text-darkBlue">Annual Plan</div>
+                  <div class="text-desaturatedBlue">$59.99/year</div>
+                </div>
+              </div>
+              <!-- Change anchor -->
+              <div>
+                <a href="" class="text-brightBlue font-bold underline md:hover:text-indigo-500 md:hover:no-underline transition duration-150"
+                  >Change</a
+                >
+              </div>
+            </div>
+            <!-- Paymen button -->
+            <div>
+              <button
+                class="w-full bg-brightBlue p-4 rounded-xl shadow shadow-[0_25px_30px_-5px_rgba(0,0,0,0.2)] md:hover:bg-indigo-500 transition duration-150"
+              >
+                <div class="text-white font-bold">Proceed to Payment</div>
+              </button>
+            </div>
+            <!-- Cancel order -->
+            <div class="pt-7 text-desaturatedBlue font-bold hover:text-black md:hover:text-veryDarkBlue transition duration-150">
+              <a href=""> Cancel Order </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
